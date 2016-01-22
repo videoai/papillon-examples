@@ -8,8 +8,7 @@ A simple FaceLog client listens on this port.  Every event it recieves it displa
 
 
 # Running
-
-'''
+```
 doFaceLogClient
 doFaceLogServer
-'''
+```
