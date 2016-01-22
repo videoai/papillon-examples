@@ -9,8 +9,8 @@
 
 # An example using the FaceLog2, not yet ready for inclusion in SDK.
 add_executable(doFaceLogServer doFaceLogServer.cpp)
-target_link_libraries(doFaceLogServer PapillonCore)
+target_link_libraries(doFaceLogServer ${PAPILLON_LIBRARIES})
 
 # An example using the FaceLog2, not yet ready for inclusion in SDK.
 add_executable(doFaceLogClient doFaceLogClient.cpp)
-target_link_libraries(doFaceLogClient PapillonCore)
+target_link_libraries(doFaceLogClient ${PAPILLON_LIBRARIES})

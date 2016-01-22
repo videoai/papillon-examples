@@ -34,6 +34,7 @@ find_package(SWIG REQUIRED)
 find_package(Papillon)
 papillon_print_variables_with_prefix(PAPILLON)
 include_directories(${PAPILLON_INCLUDE_DIR})
+link_directories(${PAPILLON_LIBRARIES})
 
 add_subdirectory(FaceLogServer)
 

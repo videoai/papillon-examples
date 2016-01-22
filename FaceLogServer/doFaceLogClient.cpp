@@ -17,10 +17,6 @@
 
 using namespace papillon;
 
-const bool ENABLE_FACE_LOCALISER = false;
-const float SCALE_FACTOR = 0.75f;
-const PString SAMPLE_DIR = PPath::Join(PUtils::GetEnv("PAPILLON_INSTALL_DIR"), "Data", "Samples");
-
 #define DODEBUG 0
 #if DODEBUG
 #define ONDEBUG(x) x
@@ -44,7 +40,7 @@ int main(int argc, char** argv) {
         return 0;
     }
 
-    // Lets publish events somewhere
+    // Lets listen to events
     PSocket socket;
     PSocket::Open(socket, PSocket::E_SUBSCRIBER, PSocket::E_CONNECT, endPoint).OrDie();
     socket.Subscribe();
@@ -61,14 +57,16 @@ int main(int argc, char** argv) {
             memoryStream.ReadObject(event);
             P_LOG_INFO << event.ToString();
             if(event.GetEventType() == "Face") {
+                // FIXME: as this is done per detection, we will get same frame more than once.  
                 PDetection detection;
                 event.GetPayload().Get("Detection", detection);
                 PUtils::DisplayDetection(detection, "Detection");
                 
             } else if(event.GetEventType() == "Track") {
+                // OK lets get some information about the track
                 PImage thumbnail;
                 event.GetPayload().Get(papillon::C_OPTION_THUMBNAIL, thumbnail);
-                thumbnail.Display("Track Thumbnail");
+                thumbnail.Display("Track Thumbnail", 250);
                 int64 startFrame;
                 int32 numberOfFrames;
                 event.GetPayload().Get("FrameNumber", startFrame);
