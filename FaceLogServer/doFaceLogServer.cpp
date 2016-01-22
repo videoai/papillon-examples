@@ -1,16 +1,6 @@
-/*
- * Copyright (C) 2015 Digital Barriers plc. All rights reserved.
- * Contact: http://www.digitalbarriers.com/
- *
- * This file is part of the Papillon SDK.
- *
- * You can't use, modify or distribute any part of this file without
- * the explicit written agreements of Digital Barriers plc.
- */
-
 /**
- * @file ExampleFaceDetector.cpp
- * @brief Example program that runs face-detector on a webcam.
+ * @file doFaceLogServer.cpp
+ * @brief Run face log and pubish events.
  */
 #include <PapillonCore.h>
 
