@@ -4,10 +4,10 @@ Some examples using Papillon.  You need an installed and working version of Papi
 
 ## Compiling
 
-'''
+```
 cd papillon-examples
 mkdir build
 cd build
 cmake ..
 make -j4
-'''
+```
