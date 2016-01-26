@@ -28,9 +28,6 @@ function (papillon_print_variables_with_prefix _prefix)
     endif(VERBOSE)
 endfunction()
 
-
-find_package(SWIG REQUIRED)
-
 find_package(Papillon)
 papillon_print_variables_with_prefix(PAPILLON)
 include_directories(${PAPILLON_INCLUDE_DIR})
