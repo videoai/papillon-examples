@@ -33,6 +33,7 @@ papillon_print_variables_with_prefix(PAPILLON)
 include_directories(${PAPILLON_INCLUDE_DIR})
 link_directories(${PAPILLON_LIBRARIES})
 
-add_subdirectory(FaceLogServer)
 add_subdirectory(MemoryStream)
+add_subdirectory(MetaData)
+add_subdirectory(FaceLogServer)
 
