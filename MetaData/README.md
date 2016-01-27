@@ -1,10 +1,6 @@
-# Memory Streams 
+# Meta Data
 
-This example shows how to change any Papillon object held in memory into a blob of characters.
+Using the [PDetector](https://videoai.net/papillon/classpapillon_1_1_p_detector.html) class you can detect things in video streams, such as motion, people and faces.  The detectors are provided by plugins and are created through a factory constructor PDetector::Create.
 
-This blob can then be saved in a persistant store, such as a redis cache, a blob in a database or on file disk.
 
-At a later stage the original Papillon object can then be reconstructed from this character blob.
-
-This is all done with the help of the [PMemoryStream](https://videoai.net/papillon/classpapillon_1_1_p_memory_stream.html) class. 
 
