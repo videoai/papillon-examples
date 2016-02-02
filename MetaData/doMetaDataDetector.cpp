@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
     PapillonSDK::Initialise(argv[0]).OrDie();
     
     POption opt(argc, argv);
-    PString inputVideo = opt.String("inputVideoStream, i", PPath::Join(SAMPLE_DIR, "face_log.mov"), "Input video stream");
+    PString inputVideo = opt.String("inputVideoStream, i", PPath::Join(SAMPLE_DIR, "face_log.avi"), "Input video stream");
     opt.AddStandardOptions(); // set-up logging
     opt.Check().OrDie();
 

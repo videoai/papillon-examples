@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
 
     POption opt(argc, argv);
     opt.AddStandardOptions(); // set-up logging
-    PString inputVideoFile = opt.String("inputVideo,i", PPath::Join(SAMPLE_DIR, "face_log.mov"), "Input video file");
+    PString inputVideoFile = opt.String("inputVideo,i", PPath::Join(SAMPLE_DIR, "face_log.avi"), "Input video file");
     PString endPoint = opt.String("uri,iu", "tcp://*:12345", "Publish events to this port");
     PString outputVideoFile = opt.String("outputVideo,o", "out.avi", "Output video file");
     int32 maxFrames = opt.Int("frames,f", 0, "Maximum number of frames to process");
